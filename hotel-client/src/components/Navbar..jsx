@@ -34,8 +34,8 @@ const useStyles = makeStyles((theme) => ({
   },
   activeSlug: {
     color: theme.palette.primary.main,
-    backgroundColor:"lightgray",
-    padding: "2px 20px",
+    backgroundColor:"rgba(76, 175, 80, 0.1)",
+    padding: "2px 30px",
     borderRadius: "30px",
     fontWeight: "bold",
   },
@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "30px",
     paddingLeft:"20px",
     paddingRight:"20px",
-    
+
     // fontSize: "10px", // Change the background color to your desired color
   },
 }));
@@ -103,8 +103,9 @@ const Navbar = () => {
       <ThemeProvider theme={theme}>
         <AppBar
           position="fixed"
-          elevation={0}
-          style={{ backgroundColor: "#ffffff" }}
+          elevation={4}
+          style={{ backgroundColor: "#ffffff", paddingBottom:"5px"}}
+          
         >
           <Toolbar
             style={{

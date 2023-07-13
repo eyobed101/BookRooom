@@ -30,6 +30,7 @@ function App() {
           {/* <Route exact path="/" component={LandingPage} /> */}
           {/* <Route exact path="/login" component={LoginPage} /> */}
           {/* <Route exact path="/register" component={RegisterPage} /> */}
+          <Route path="/home" element={<Home />} />
           <Route path="/" element={<Home />} />
           {/* <Route exact path="/rooms" component={Rooms} /> */}
           {/* <Route exact path="/rooms/:slug" component={SingleRoom} /> */}
