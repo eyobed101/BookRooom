@@ -16,7 +16,7 @@ const Hero = () => {
       <Grid container spacing={6} className={classes.gridContainer}>
         <Grid item xs={12} md={7}>
           <Typography variant="h3" fontWeight={700} className={classes.title}>
-          Discover, Book, Stay: Your Ethiopian Adventure.
+          Discover, Book, Stay: Your Ethiopian Adventure
           </Typography>
           <Typography variant="h6" className={classes.subtitle}>
           Discover the beauty of Ethiopia and book your dream accommodations

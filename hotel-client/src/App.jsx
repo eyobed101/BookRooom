@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import { ThemeProvider, createTheme } from "@mui/material";
 import Navbar from "./components/Navbar.";
 import { orange } from "@mui/material/colors";
+import Rooms from "./pages/Rooms";
 
 
 const theme = createTheme({
@@ -32,6 +33,7 @@ function App() {
           {/* <Route exact path="/register" component={RegisterPage} /> */}
           <Route path="/home" element={<Home />} />
           <Route path="/" element={<Home />} />
+          <Route path="/rooms" element={<Rooms />} />
           {/* <Route exact path="/rooms" component={Rooms} /> */}
           {/* <Route exact path="/rooms/:slug" component={SingleRoom} /> */}
           {/* <Route exact path="/booknow" component={PaymentForm} /> */}

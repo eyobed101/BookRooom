@@ -28,7 +28,7 @@ const Section = () => {
     },
   ];
   return (
-    <Box sx={{ flexGrow: 1, minHeight: '400px' }}>
+    <Box sx={{ flexGrow: 1, minHeight: '400px'}}>
       <Grid container className={classes.sectionGridContainer}>
         {sectionItems.map((item) => (
           <Grid
