@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import RoomsContainer from "./components/Rooms/RoomsContainer";
 
 const RoomContext = React.createContext();
 
@@ -20,7 +21,6 @@ export default class RoomProvider extends Component {
     pets: false,
   };
 
-  // get data, when component mounts change the state
   componentDidMount() {
     axios
       .get("http://127.0.0.1:8800/api/hotels")
@@ -116,6 +116,8 @@ export default class RoomProvider extends Component {
           handleChange: this.handleChange,
         }}
       >
+        {console.log(value)}
+        <RoomsContainer value={value} />
         {this.props.children}
       </RoomContext.Provider>
     );
@@ -126,14 +128,17 @@ const RoomConsumer = RoomContext.Consumer;
 
 export { RoomProvider, RoomConsumer, RoomContext };
 
+
 // HOC (Higher-Order Component)
-export const withRoomConsumer = (WrappedComponent) => {
-  return function RoomConsumerWrapper(props) {
+export function withRoomConsumer(Component) {
+  return function ConsumerWrapper(props) {
+    
     return (
       <RoomConsumer>
-        {(value) => <WrappedComponent {...props} context={value} />}
+        {(value) => <Component {...props} context={value} />}
       </RoomConsumer>
     );
   };
-};
+}
+
 
