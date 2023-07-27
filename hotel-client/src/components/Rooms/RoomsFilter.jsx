@@ -1,7 +1,12 @@
 import React, { useContext } from "react";
-import { styled } from "@mui/material/styles";
+import { experimentalStyled as styled } from '@mui/material/styles';
 import { RoomContext } from "../../context";
 import Typography from "@mui/material/Typography";
+import { room1, room2, HeroImage, room4, home3 } from "../../assets/rooms";
+import Carousel from "react-material-ui-carousel";
+import { Box } from "@mui/material";
+
+const heroImages = [room1, room2, HeroImage, room4];
 
 // get all unique values
 const getUnique = (items, value) => {
@@ -9,15 +14,32 @@ const getUnique = (items, value) => {
 };
 
 const FilterContainer = styled("section")({
+  display:"flex",
+  flexDirection:'wrap',
+  padding: "5rem",
+  marginTop:"5rem",
+  marginRight:"5rem", marginLeft:"5rem" , marginBottom:"5rem",
+  justifyContent:"center",
+  alignItems:"center",
+  backgroundColor:"rgba(0, 0, 0, .1)",
+  borderRadius:"20px",
+  boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.5)'
   // Add your Material UI styles here
 });
 
 const FilterForm = styled("form")({
   // Add your Material UI styles here
+  width: "60vw",
+  margin: "0 auto",
+  display: "grid",
+  gridTemplateColumns : "repeat(auto-fit, minmax(202px, 1fr))",
+  gridRowGap: "2rem",
+  gridColumnGap: "40px",
 });
 
 const FormGroup = styled("div")({
   // Add your Material UI styles here
+  textTransform: "capitalize",
 });
 
 const Select = styled("select")({
@@ -72,7 +94,11 @@ const RoomsFilter = ({ rooms }) => {
 
   //  controlled inputs
   return (
-    <FilterContainer>
+       
+     <Box sx={{width:'100vw', minHeight:"600px",display:"flex", flexDirection:'column',alignItems:"center", justifyContent:"center"}}>
+      <img src={home3} alt="rooms" width="100%" height="600px"/>
+    
+    <FilterContainer className="section">
       <Typography variant="h6" gutterBottom>
         search rooms
       </Typography>
@@ -173,6 +199,8 @@ const RoomsFilter = ({ rooms }) => {
         {/* end of extras */}
       </FilterForm>
     </FilterContainer>
+    </Box>   
+    
   );
 };
 

@@ -20,6 +20,8 @@ import room18 from './room (18).png'
 import room19 from './room (19).png'
 import room20 from './room (20).png'
 import room21 from './room (21).png'
+import home3 from './home3.jpg'
+import home4 from './home4.jpg'
 
 
 export {
@@ -45,6 +47,7 @@ room18,
 room19,
 room20,
 room21,
-
+home3,
+home4
 }
 

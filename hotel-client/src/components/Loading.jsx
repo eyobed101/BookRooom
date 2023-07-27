@@ -1,5 +1,5 @@
 import { CircularProgress } from '@mui/material';
-import { Box, styled } from '@mui/system';
+import { Box, styled } from '@mui/material';
 
 const StyledLoading = styled('div')(() => ({
   width: '100%',
@@ -7,6 +7,7 @@ const StyledLoading = styled('div')(() => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  backgroundColor:"#fff",
   '& img': {
     width: 'auto',
     height: '25px',

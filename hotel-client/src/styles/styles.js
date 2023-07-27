@@ -41,8 +41,19 @@ const styles = (theme) => {
       minHeight: '600px',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: "rgba(76, 175, 80, 0.1)"
+      
     },
+      roomsBox: {
+        width:"100%",
+    display: 'flex',
+    flexWrap:'wrap',
+    justifyContent: 'center',
+    alignItems:'center',
+    // margin:'auto',
+   
+    gap: '1rem',
+    
+  },
     gridContainer: {
       display: 'flex',
       alignItems: 'center',
@@ -79,6 +90,7 @@ const styles = (theme) => {
       justifyContent: 'center',
       width: '100%',
       minHeight: '500px',
+      backgroundColor: "rgba(76, 175, 80, 0.1)"
     },
     sectionGridItem: {
       textAlign: 'center',
@@ -86,8 +98,9 @@ const styles = (theme) => {
       width: '200px',
       borderRadius: '10px',
       margin: '10px !important',
-      boxShadow: "2px 2px 5px 2px #999999"
-      
+      boxShadow: "2px 2px 5px 2px #999999",
+      backgroundColor: "rgba(255, 255, 255, 1)"
+
     },
     inputField: {
       marginBottom: '20px !important',
